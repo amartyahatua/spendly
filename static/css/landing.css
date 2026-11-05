@@ -1,0 +1,245 @@
+/* ------------------------------------------------------------------ */
+/* Landing hero                                                        */
+/* ------------------------------------------------------------------ */
+
+.landing-hero {
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+}
+
+.landing-hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.landing-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #e6f5ee;
+    color: #2e7d5f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.landing-hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3f9e7e;
+}
+
+.landing-hero-title {
+    font-family: var(--font-body);
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.75rem;
+}
+
+.landing-hero-title span {
+    color: #3f9e7e;
+}
+
+.landing-hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+}
+
+.landing-hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.landing-hero-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9rem 1.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.landing-hero-btn:hover { background: var(--accent); }
+
+/* Dashboard preview ------------------------------------------------ */
+
+.landing-dash {
+    max-width: 1040px;
+    margin: 5rem auto 0;
+    background: #f5f5f4;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 2rem 2rem;
+}
+
+.landing-dash-dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.landing-dash-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot-red { background: #e8a0a0; }
+.dot-amber { background: #f0cd8a; }
+.dot-green { background: #a8d8c2; }
+
+.landing-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.landing-dash-stat {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.landing-dash-label {
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+}
+
+.landing-dash-value {
+    font-size: 1.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.landing-dash-delta {
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+}
+
+.delta-up { color: #b5383f; }
+.delta-good { color: #3f9e7e; }
+
+.landing-dash-bars {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.landing-dash-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.landing-dash-cat {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    text-align: right;
+}
+
+.landing-dash-track {
+    height: 10px;
+    background: #f1f0ec;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.landing-dash-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-food { background: #e9b04a; }
+.bar-travel { background: #4a8fe0; }
+.bar-bills { background: #8a7fd8; }
+
+@media (max-width: 900px) {
+    .landing-dash-stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .landing-hero { padding: 3rem 1rem 2rem; }
+    .landing-dash { padding: 1rem; }
+    .landing-dash-bars { padding: 1rem; }
+    .landing-dash-row { grid-template-columns: 70px 1fr; gap: 0.75rem; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Demo modal                                                          */
+/* ------------------------------------------------------------------ */
+
+.landing-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(15, 15, 15, 0.7);
+}
+
+.landing-modal[hidden] { display: none; }
+
+.landing-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    background: var(--paper-card);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.landing-modal-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.landing-modal-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.landing-modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-sm);
+}
